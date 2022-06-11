@@ -1,0 +1,12 @@
+library(stabs)		# for stability selection
+
+fitter<- function (x, y, q, ...){ 
+     fit <- hqreg::hqreg(x, y, dfmax = q - 1, method = "quantile", tau = 0.5, alpha = 1)
+     selected<- which(coef(fit)[-1,length(fit$lambda)]!=0)
+     ret <- logical(ncol(X_in))
+     ret[selected] <- TRUE
+     names(ret) <- colnames(X_in)
+     cf <- fit$beta[-1,]
+     sequence <- as.matrix(cf != 0)
+     return(list(selected = ret, path = sequence))
+}
