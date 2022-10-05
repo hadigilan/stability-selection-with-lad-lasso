@@ -13,4 +13,4 @@ Yi, C. (2017). hqreg: Regularization Paths for Lasso or Elastic-Net Penalized Hu
 
 **Contact**
 
-Please contact Hadi Movaghari for any questions regarding the code. If you use thi code, please CITE the first paper as the code source.
+Please contact Hadi Movaghari for any questions regarding the code. If you use this code, please CITE the first paper as the code source.
